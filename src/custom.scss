@@ -1,0 +1,142 @@
+body{
+  background-color: dodgerblue !important;
+}
+
+$lanzini-gold: #bf9456;
+
+#preloader-wrapper{
+  align-items:center;
+  background: $lanzini-gold no-repeat;
+  display:flex;
+  height:100vh;
+  justify-content:center;
+  position:fixed;
+  width:100%;
+  z-index:100;
+}
+#preloader{
+  animation:scales 2s ease-in-out infinite;
+  z-index:101
+}
+@keyframes scales{
+  0%{
+    transform:scale(10%)
+  }
+  100%{
+    transform:scale(60%)
+  }
+}
+#hero{
+  filter:brightness(70%);
+  object-fit:cover;
+  position:absolute!important;
+  z-index:-1!important
+}
+
+.fb-icon{
+  position:relative;
+}
+.fb-icon:before{
+  background:#3457a1 url(./imgs/facebook.svg) no-repeat center center;
+  content:"";
+  display: none;
+  height:20px;
+  position:absolute;
+  left:6px;
+  top:28px;
+  width:20px
+}
+.fb-icon:hover:before{
+  animation:comes .4s ease-in-out 1 alternate forwards;
+  display: block;
+}
+@keyframes comes{
+  0%{
+    opacity:0;
+    transform:translateY(0)
+  }
+  100%{
+    opacity:1;
+    transform:translateY(-20px)
+  }
+}
+.gone{
+  display:block
+}
+.gone:hover{
+  animation:gone .4s ease-in-out 1 alternate forwards
+}
+@keyframes gone{
+  0%{
+    opacity:1;
+    transform:translateY(0)
+  }
+  100%{
+    opacity:0;transform:translateY(-16px)
+  }
+}
+.tw-icon{
+  position:relative
+}
+.tw-icon:before{
+  background:#029be7 url(./imgs/twitter.svg) no-repeat center center;
+  content:"";
+  display:none;
+  height:20px;
+  left:6px;
+  position:absolute;
+  top:28px;
+  width:20px
+}
+.tw-icon:hover:before{
+  animation:comes .3s ease-in-out 1 alternate forwards;
+  display:block
+}
+.ins-icon{
+  position:relative
+}
+.ins-icon:before{
+  background:#bf0078 url(./imgs/instagram.svg) no-repeat 50%;
+  content:"";
+  display:none;
+  height:20px;
+  left:6px;
+  position:absolute;
+  top:28px;
+  width:20px
+}
+.ins-icon:hover:before{
+  animation:comes .3s ease-in-out 1 alternate forwards;
+  display:block
+}
+.yt-icon{
+  position:relative
+}
+.yt-icon:before{
+  background:#f20000 url(./imgs/youtube.svg) no-repeat center center;
+  content:"";
+  display:none;
+  height:20px;
+  left:6px;
+  position:absolute;
+  top:28px;
+  width:20px
+}
+.yt-icon:hover:before{
+  animation:comes .4s ease-in-out 1 alternate forwards;
+  display:block
+}
+.pages:hover{
+  color: $lanzini-gold !important;
+  transition:all .2s ease-in
+}
+
+#nav1{
+  z-index:1
+}
+#nav1,#nav2{
+  position:relative!important
+}
+#nav2{
+  z-index:2
+}
