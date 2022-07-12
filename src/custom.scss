@@ -26,11 +26,17 @@ $lanzini-gold: #bf9456;
     transform:scale(60%)
   }
 }
+#navigation {
+  position:absolute;
+  top:0;
+  left:0;
+}
 #hero{
   filter:brightness(70%);
+  display: block;
+  padding:0;
+  margin:0;
   object-fit:cover;
-  position:absolute!important;
-  z-index:-1!important
 }
 
 .fb-icon{
