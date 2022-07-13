@@ -38,39 +38,36 @@ $lanzini-gold: #bf9456;
   margin:0;
   object-fit:cover;
 }
-
+.gone{
+  display:block;
+}
+.comes {
+  display: none;
+}
 .fb-icon{
   position:relative;
 }
-.fb-icon:before{
-  background:#3457a1 url(./imgs/facebook.svg) no-repeat center center;
-  content:"";
-  display: none;
-  height:20px;
-  position:absolute;
-  left:6px;
-  top:28px;
-  width:20px
+.fb-icon:hover {
+  background: #3457a1;
 }
-.fb-icon:hover:before{
-  animation:comes .4s ease-in-out 1 alternate forwards;
+.fb-icon:hover .gone {
+  animation:gone .2s ease-in-out 1 alternate forwards;
+  display: none;
+}
+
+.fb-icon:hover .comes {
   display: block;
+  animation:comes .2s ease-in-out 1 alternate forwards;
 }
 @keyframes comes{
   0%{
-    opacity:0;
-    transform:translateY(0)
+    opacity: 0;
+    transform:translateY(24px)
   }
   100%{
-    opacity:1;
-    transform:translateY(-20px)
+    opacity: 1;
+    transform:translateY(0)
   }
-}
-.gone{
-  display:block
-}
-.gone:hover{
-  animation:gone .4s ease-in-out 1 alternate forwards
 }
 @keyframes gone{
   0%{
@@ -78,59 +75,50 @@ $lanzini-gold: #bf9456;
     transform:translateY(0)
   }
   100%{
-    opacity:0;transform:translateY(-16px)
+    opacity:0;transform:translateY(-12px);
   }
 }
 .tw-icon{
   position:relative
 }
-.tw-icon:before{
-  background:#029be7 url(./imgs/twitter.svg) no-repeat center center;
-  content:"";
-  display:none;
-  height:20px;
-  left:6px;
-  position:absolute;
-  top:28px;
-  width:20px
+.tw-icon:hover {
+  background: #029be7;
 }
-.tw-icon:hover:before{
-  animation:comes .3s ease-in-out 1 alternate forwards;
-  display:block
+.tw-icon:hover .gone{
+  animation:gone .2s ease-in-out 1 alternate forwards;
+  display:none;
+}
+.tw-icon:hover .comes{
+  display: block;
+  animation:comes .2s ease-in-out 1 alternate forwards;
 }
 .ins-icon{
-  position:relative
+  position:relative;
 }
-.ins-icon:before{
-  background:#bf0078 url(./imgs/instagram.svg) no-repeat 50%;
-  content:"";
+.ins-icon:hover {
+  background: #bf0078;
+}
+.ins-icon:hover .gone{
+  animation:gone .2s ease-in-out 1 alternate forwards;
   display:none;
-  height:20px;
-  left:6px;
-  position:absolute;
-  top:28px;
-  width:20px
 }
-.ins-icon:hover:before{
-  animation:comes .3s ease-in-out 1 alternate forwards;
-  display:block
+.ins-icon:hover .comes{
+  display: block;
+  animation:comes .2s ease-in-out 1 alternate forwards;
 }
 .yt-icon{
   position:relative
 }
-.yt-icon:before{
-  background:#f20000 url(./imgs/youtube.svg) no-repeat center center;
-  content:"";
-  display:none;
-  height:20px;
-  left:6px;
-  position:absolute;
-  top:28px;
-  width:20px
+.yt-icon:hover{
+  background:#f20000;
 }
-.yt-icon:hover:before{
-  animation:comes .4s ease-in-out 1 alternate forwards;
-  display:block
+.yt-icon:hover .gone{
+  animation:gone .2s ease-in-out 1 alternate forwards;
+  display:none;
+}
+.yt-icon:hover .comes{
+  display: block;
+  animation:comes .2s ease-in-out 1 alternate forwards;
 }
 .pages:hover{
   color: $lanzini-gold !important;
