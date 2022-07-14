@@ -20,16 +20,16 @@ $lanzini-gold: #bf9456;
 }
 @keyframes scales{
   0%{
-    transform:scale(10%)
+    opacity: 0.2;
+    transform:scale(30%)
   }
   100%{
+    opacity: 1;
     transform:scale(60%)
   }
 }
 #navigation {
-  position:absolute;
-  top:0;
-  left:0;
+  z-index:1;
 }
 #hero{
   filter:brightness(70%);
@@ -120,17 +120,98 @@ $lanzini-gold: #bf9456;
   display: block;
   animation:comes .2s ease-in-out 1 alternate forwards;
 }
+.gp-icon {
+  position:relative;
+}
+.gp-icon:hover {
+  background: #d85346;
+}
+.gp-icon:hover .gone {
+  animation: gone .2s ease-in-out 1 alternate forwards;
+  display: none;
+}
+.gp-icon:hover .comes {
+  display: block;
+  animation: comes .2s ease-in-out 1 alternate forwards;
+}
+.pin-icon {
+  position:relative;
+}
+.pin-icon:hover {
+  background: #c8232c;
+}
+.pin-icon:hover .gone {
+  animation: gone .2s ease-in-out 1 alternate forwards;
+  display: none;
+}
+.pin-icon:hover .comes {
+  display: block;
+  animation: comes .2s ease-in-out 1 alternate forwards;
+}
+.vimeo-icon {
+  position:relative;
+}
+.vimeo-icon:hover {
+  background: #86c9ef;
+}
+.vimeo-icon:hover .gone {
+  animation: gone .2s ease-in-out 1 alternate forwards;
+  display: none;
+}
+.vimeo-icon:hover .comes {
+  display: block;
+  animation: comes .2s ease-in-out 1 alternate forwards;
+}
 .pages:hover{
   color: $lanzini-gold !important;
   transition:all .2s ease-in
 }
 
-#nav1{
-  z-index:1
-}
 #nav1,#nav2{
   position:relative!important
 }
-#nav2{
-  z-index:2
+// press start
+.expand-1 {
+  background-image: url(./imgs/0001.jpg);
+}
+.expand-2 {
+  background-image: url(./imgs/2.jpg);
+}
+.expand-3 {
+  background-image: url(./imgs/3.jpg);
+}
+.expand-4 {
+  background-image: url(./imgs/4.jpg);
+}
+.expand-5 {
+  background-image: url(./imgs/5.jpg);
+}
+
+.block-expand .expand {
+  position:relative;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 10px 0;
+  min-height: 60px;
+  cursor: pointer;
+}
+
+@media (min-width:992px) {
+  .block-expand .expand {
+    height: 50vh;
+    flex: 1;
+    margin: 0 10px;
+    transition: flex 1s ease;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0 , 0);
+  }
+  .block-expand:not(.on-click) .expand:hover,
+  .block-expand.on-click .expand.active { flex: 10; }
+}
+// press end
+
+.link-dec-none {
+  list-style: none;
+  
 }
