@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'loraregular';
+    src: url('./fonts/lora-regular-webfont.woff2') format('woff2'),
+         url('./fonts/lora-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
   background-color: dodgerblue !important;
+
+  font-family:  'loraregular', serif !important;
 }
 
 $lanzini-gold: #bf9456;
@@ -31,6 +42,62 @@ $lanzini-gold: #bf9456;
 #navigation {
   z-index:1;
 }
+.nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li {
+      padding: 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-family:  'loraregular', serif !important;
+
+        &:hover {
+          color: $lanzini-gold;
+        }
+      }
+    }
+  }  
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    padding: 0.5rem;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1rem;
+        font-family:  'loraregular', serif !important;
+
+        &:hover {
+          color: $lanzini-gold;
+        }
+    }
+  }
+}
+ul {list-style-type: none;}
+
 #hero{
   filter:brightness(70%);
   display: block;

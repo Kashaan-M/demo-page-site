@@ -1,4 +1,4 @@
 import "bootstrap";
 import "./preloader";
-import "./loadVideos";
+// import "./loadVideos";
 import "./main.scss";
